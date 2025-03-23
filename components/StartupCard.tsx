@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { Button } from './ui/button'
 import { Author, Startup } from '@/sanity/types'
 
-export type StartupTypeCard = Omit<Startup, "author"> & {author?: Author}
+export type StartupTypeCard = Omit<Startup, "author"> & { author?: Author }
 
 const StartupCard = ({ post }: { post: StartupTypeCard }) => {
     const { _createdAt, views, author, _id, title, category, image, description } = post
@@ -40,9 +40,8 @@ const StartupCard = ({ post }: { post: StartupTypeCard }) => {
                     src={image || "https://placehold.co/100x75"}
                     alt={title || "Default title"}
                     className="startup-card_img mt-2"
-                    layout="responsive"
                     width={100}
-                    height={75}
+                    height={100}
                 />
             </Link>
             <div className="flex-between gap-3 mt-5">
