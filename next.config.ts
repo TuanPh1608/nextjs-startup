@@ -14,9 +14,7 @@ const nextConfig: NextConfig = {
   experimental: {
     ppr: 'incremental'
   },
-  devIndicators: {
-    position: 'bottom-right', 
-  }
+  devIndicators: false
 };
 
 export default nextConfig;
