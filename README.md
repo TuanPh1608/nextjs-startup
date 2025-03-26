@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# NextJS Startup
 
-## Getting Started
+Đây là một dự án Next.js. Làm theo các bước dưới đây để thiết lập và chạy dự án trên máy của bạn.
 
-First, run the development server:
+## Thiết lập
 
+1. Clone repository về máy.
+2. Cài đặt các dependencies:
+   ```bash
+   npm install
+   ```
+3. Tạo file `.env.local` trong thư mục gốc và thêm các biến môi trường sau:
+   ```
+   AUTH_SECRET=<your_auth_secret>
+   AUTH_GITHUB_ID=<your_github_id>
+   AUTH_GITHUB_SECRET=<your_github_secret>
+   NEXT_PUBLIC_SANITY_PROJECT_ID=<your_sanity_project_id>
+   NEXT_PUBLIC_SANITY_DATASET=<your_sanity_dataset>
+   SANITY_WRITE_TOKEN=<your_sanity_write_token>
+   ```
+
+   Thay `<your_auth_secret>`, `<your_github_id>`, `<your_github_secret>`, `<your_sanity_project_id>`, `<your_sanity_dataset>`, và `<your_sanity_write_token>` bằng giá trị của bạn.
+
+4. Tạo file `.env.sentry-build-plugin` trong thư mục gốc và thêm biến môi trường sau:
+   ```
+   SENTRY_AUTH_TOKEN=<your_sentry_auth_token>
+   ```
+
+   Thay `<your_sentry_auth_token>` bằng giá trị của bạn.
+
+## Chạy dự án
+Để chạy dự án trên máy:
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Triển khai
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Dự án đã được triển khai tại: [https://nextjs-startup-phi.vercel.app/](https://nextjs-startup-phi.vercel.app/)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
