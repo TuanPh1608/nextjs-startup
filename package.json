@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -12,17 +12,13 @@
     "typegen": "sanity schema extract --path=./sanity/extract.json && sanity typegen generate"
   },
   "packageManager": "npm@11.2.0",
-  "overrides": {
-    "react": "$react",
-    "react-dom": "$react-dom",
-    "next": "$next"
-  },
   "dependencies": {
     "@radix-ui/react-slot": "^1.1.2",
     "@radix-ui/react-toast": "^1.2.6",
     "@sanity/icons": "^3.7.0",
     "@sanity/image-url": "^1.1.0",
     "@sanity/vision": "^3.80.1",
+    "@sentry/nextjs": "^9.9.0",
     "@tailwindcss/typography": "^0.5.16",
     "@uiw/react-md-editor": "^4.0.5",
     "class-variance-authority": "^0.7.1",
