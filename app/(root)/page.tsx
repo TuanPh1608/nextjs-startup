@@ -1,3 +1,4 @@
+import { auth } from "@/auth";
 import SearchForm from "@/components/SearchForm";
 import StartupCard, { StartupTypeCard } from "@/components/StartupCard";
 import { sanityFetch, SanityLive } from "@/sanity/lib/live";
@@ -12,16 +13,8 @@ export default async function Home({ searchParams }: {
   
   const { data: posts } = await sanityFetch({ query: STARTUPS_QUERY, params })
 
-  // const posts = [{
-  //   _createdAt: "2021-09-01T00:00:00Z",
-  //   views: 100,
-  //   author: { _id: "1", name: "John Doe" },
-  //   _id: 1,
-  //   description: "A startup that does something",
-  //   image: "https://images.unsplash.com/photo-1634912314704-c646c586b131?q=806w=2940&auto=format&f",
-  //   catergory: "Robots",
-  //   title: "Robotics Startup"
-  // }]
+  const session = await auth()
+  console.log(session?.id)
   return (
     <>
       <section className="pink_container">
