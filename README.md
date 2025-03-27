@@ -1,6 +1,6 @@
 # NextJS Startup
 
-Đây là một dự án Next.js. Làm theo các bước dưới đây để thiết lập và chạy dự án trên máy của bạn.
+Đây là một dự án cho việc học Next.js
 
 ## Thiết lập
 
@@ -9,7 +9,7 @@
    ```bash
    npm install
    ```
-3. Tạo file `.env.local` trong thư mục gốc và thêm các biến môi trường sau:
+3. Tạo file `.env.local` trong thư mục gốc và thêm các biến môi trường cũng như giá trị sau:
    ```
    AUTH_SECRET=<your_auth_secret>
    AUTH_GITHUB_ID=<your_github_id>
@@ -19,14 +19,11 @@
    SANITY_WRITE_TOKEN=<your_sanity_write_token>
    ```
 
-   Thay `<your_auth_secret>`, `<your_github_id>`, `<your_github_secret>`, `<your_sanity_project_id>`, `<your_sanity_dataset>`, và `<your_sanity_write_token>` bằng giá trị của bạn.
-
-4. Tạo file `.env.sentry-build-plugin` trong thư mục gốc và thêm biến môi trường sau:
+4. Tạo file `.env.sentry-build-plugin` trong thư mục gốc và thêm biến môi trường và giá trị:
    ```
    SENTRY_AUTH_TOKEN=<your_sentry_auth_token>
    ```
 
-   Thay `<your_sentry_auth_token>` bằng giá trị của bạn.
 
 ## Chạy dự án
 Để chạy dự án trên máy:
